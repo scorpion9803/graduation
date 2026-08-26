@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>دعوة حفل تخرج - المهندس محمد والمهندس عدي رحمون</title>
+
+    <!-- وسومات المشاركة الاجتماعية (Open Graph & SEO Meta Tags) -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-domain.com/">
+    <meta property="og:title" content="دعوة حفل تخرج - المهندس محمد والمهندس عدي رحمون 🎓">
+    <meta property="og:description" content="يسعدنا أن نتشارك معكم فرحة حصاد السنين، نتشرف بدعوتكم لحضور مناقشة مشاريع تخرجنا الأحد 30 أغسطس 2026.">
+    <meta property="og:image" content="assets/images/og-preview.jpg">
+    
+    <!-- وسومات تويتر Social Media Preview -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="دعوة حفل تخرج - المهندس محمد والمهندس عدي رحمون 🎓">
+    <meta name="twitter:description" content="يسعدنا أن نتشارك معكم فرحة حصاد السنين، نتشرف بدعوتكم لحضور مناقشة مشاريع تخرجنا.">
+    <meta name="twitter:image" content="assets/images/og-preview.jpg">
+
+    <!-- الخطوط والأيقونات -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@300;400;500;700;900&family=Fira+Code:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+
+    <!-- خلفية السايبر التفاعلية -->
+    <canvas id="techCanvas"></canvas>
+
+    <!-- الهيدر الرئيسي -->
+    <header class="main-header">
+        <div class="badge">&lt; GRADUATION_CEREMONY_2026 /&gt;</div>
+        
+        <h1 class="main-title">دعوة حفل تخرج</h1>
+        
+        <p class="sub-title">
+            <span class="gradient-text-blue">المهندس محمد صدام رحمون</span>
+            <span class="and-symbol">&amp;</span>
+            <span class="gradient-text-orange">المهندس عدي صدام رحمون</span>
+        </p>
+
+        <!-- كلمة الدعوة الراقية -->
+        <div class="invitation-speech">
+            <i class="fa-solid fa-quote-right quote-icon"></i>
+            <p>
+                بمشاعر يُخالطها الفخر وتتوجها سنوات من الجهد والاجتهاد، يسعدنا أن نتشارك معكم فرحة حصاد السنين، 
+                ونتشرف بدعوتكم لحضور مناقشة مشاريع تخرجنا واعتلاء منصة التتويج العلمي. 
+                حضوركم يُضيء أركان يومنا ويكتمل به أُنْس فرحتنا.
+            </p>
+            <!-- اعتذار وتنبيه عدم اصطحاب الأطفال -->
+            <p class="speech-children-note">
+                <i class="fa-solid fa-heart"></i> نعتذر عن عدم استقبال الأطفال حِرصاً على هدوء قاعة المناقشة وتركيز لجنة التحكيم.
+            </p>
+        </div>
+
+        <!-- عرض الوقت والتاريخ بشكل متباين وبارز -->
+        <div class="time-highlight-box">
+            <div class="time-item date-card">
+                <i class="fa-regular fa-calendar-check"></i>
+                <div>
+                    <span class="time-label">تاريخ الحفل والمناقشة</span>
+                    <span class="time-val">الأحد · 30 أغسطس 2026</span>
+                </div>
+            </div>
+            <div class="time-divider"></div>
+            <div class="time-item hour-card">
+                <i class="fa-regular fa-clock"></i>
+                <div>
+                    <span class="time-label">توقيت الانطلاق</span>
+                    <span class="time-val">الساعة 09:00 صباحاً</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- أزرار التقويم والمشاركة الفائقة التفاعل -->
+        <div class="utility-action-buttons">
+            <button class="btn-action-cyber btn-calendar" id="addToCalendarBtn">
+                <i class="fa-solid fa-calendar-plus"></i>
+                <span>إضافة لتقويم جوجل</span>
+            </button>
+            <button class="btn-action-cyber btn-share" id="shareInviteBtn">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>مشاركة الدعوة</span>
+            </button>
+        </div>
+
+        <!-- العداد التنازلي -->
+        <div class="countdown-grid">
+            <div class="countdown-item"><span id="days">00</span><span>أيام</span></div>
+            <div class="countdown-item"><span id="hours">00</span><span>ساعات</span></div>
+            <div class="countdown-item"><span id="minutes">00</span><span>دقائق</span></div>
+            <div class="countdown-item"><span id="seconds">00</span><span>ثواني</span></div>
+        </div>
+
+        <!-- لوحة الإحصائيات العلوية -->
+        <div class="stats-dashboard">
+            <div class="stat-card total-card">
+                <span class="stat-label">إجمالي المؤكدين</span>
+                <span class="stat-number" id="total-guests">0</span>
+            </div>
+            <div class="stat-card mohammed-card">
+                <span class="stat-label">حضور محمد</span>
+                <span class="stat-number" id="mohammed-guests">0</span>
+            </div>
+            <div class="stat-card oday-card">
+                <span class="stat-label">حضور عدي</span>
+                <span class="stat-number" id="oday-guests">0</span>
+            </div>
+        </div>
+
+        <!-- أزرار التوجيه السريع لتأكيد الحضور -->
+        <div class="direct-confirm-buttons">
+            <button class="btn-direct-mohammed" onclick="document.querySelector('.card-mohammed').scrollIntoView({behavior: 'smooth'})">
+                <i class="fa-solid fa-laptop-code"></i>
+                <span>تأكيد الحضور لدى محمد</span>
+            </button>
+            <button class="btn-direct-oday" onclick="document.querySelector('.card-oday').scrollIntoView({behavior: 'smooth'})">
+                <i class="fa-solid fa-oil-well"></i>
+                <span>تأكيد الحضور لدى عدي</span>
+            </button>
+        </div>
+    </header>
+
+    <!-- قسم البطاقات التفصيلية -->
+    <section id="cards" class="cards-section">
+        <div class="section-header">
+            <h2>مكان المناقشة وتأكيد الحضور</h2>
+            <p>المناقشتان منفصلتان، يُرجى الضغط على الزر المخصص للخريج الذي تود الحضور لديه</p>
+        </div>
+
+        <div class="cards-vertical">
+            <!-- بطاقة المهندس محمد (معلوماتية) -->
+            <div class="glass-card card-mohammed">
+                <div class="card-glow glow-1"></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-laptop-code"></i></div>
+                        <div>
+                            <h3 class="card-name">المهندس محمد صدام رحمون</h3>
+                            <p class="card-specialty">هندسة معلوماتية · Software Engineering</p>
+                        </div>
+                    </div>
+
+                    <a href="location.html" class="card-location-link" title="اضغط لمعاينة الخريطة ودليل الوصول">
+                        <div class="location-inner">
+                            <i class="fas fa-map-location-dot"></i>
+                            <span>القاعة 9 - كلية الهندسة المعلوماتية</span>
+                        </div>
+                        <span class="location-btn-tag">تفاصيل الموقع <i class="fa-solid fa-arrow-left"></i></span>
+                    </a>
+
+                    <div class="thesis-box">
+                        <p class="thesis-label">عنوان المناقشة</p>
+                        <p class="thesis-title"><i class="fas fa-laptop-code"></i> تطبيق عقار لبيع وتاجير العقارات</p>
+                    </div>
+
+                    <div class="counter-badge">
+                        <span><i class="fa-regular fa-circle-user"></i> عدد الحاضرين المؤكدين</span>
+                        <span class="counter-number" id="count-mohammed">0</span>
+                    </div>
+
+                    <button class="btn-confirm btn-confirm-mohammed" data-target="mohammed">
+                        <i class="fa-regular fa-square-check"></i> تأكيد الحضور لدى محمد
+                    </button>
+                </div>
+            </div>
+
+            <!-- بطاقة المهندس عدي (بترول) -->
+            <div class="glass-card card-oday">
+                <div class="card-glow glow-2"></div>
+                <div class="card-content">
+                    <div class="card-header">
+                        <div class="card-icon"><i class="fas fa-oil-well"></i></div>
+                        <div>
+                            <h3 class="card-name">المهندس عدي صدام رحمون</h3>
+                            <p class="card-specialty">هندسة بترول · Petroleum Engineering</p>
+                        </div>
+                    </div>
+
+                    <a href="location.html" class="card-location-link oday-link" title="اضغط لمعاينة الخريطة ودليل الوصول">
+                        <div class="location-inner">
+                            <i class="fas fa-map-location-dot"></i>
+                            <span>القاعة 12 - كلية الهندسة البترولية والكيميائية</span>
+                        </div>
+                        <span class="location-btn-tag">تفاصيل الموقع <i class="fa-solid fa-arrow-left"></i></span>
+                    </a>
+
+                    <div class="thesis-box thesis-oday">
+                        <p class="thesis-label">عنوان المناقشة</p>
+                        <p class="thesis-title"><i class="fas fa-oil-well"></i> دراسة تأثير الضغط الخارجي على مقاومة مواسير التغليف في حقول المنطقة الوسطى </p>
+                    </div>
+
+                    <div class="counter-badge">
+                        <span><i class="fa-regular fa-circle-user"></i> عدد الحاضرين المؤكدين</span>
+                        <span class="counter-number" id="count-oday">0</span>
+                    </div>
+
+                    <button class="btn-confirm btn-confirm-oday" data-target="oday">
+                        <i class="fa-regular fa-square-check"></i> تأكيد الحضور لدى عدي
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- مودال الحجز وتأكيد العدد -->
+    <div class="modal-overlay" id="modalOverlay">
+        <div class="modal-box">
+            <h2 id="modalTitle">تأكيد الحضور</h2>
+            <p id="modalSub">يرجى كتابة اسمكم الكريم وتحديد عدد المرافقين معكم</p>
+            
+            <div class="children-notice">
+                <i class="fa-solid fa-child-reaching"></i>
+                <span><strong>تنويـــه واعتذار لطيف:</strong> نعتذر بشدة عن عدم إمكانية استقبال الأطفال؛ حرصاً على توفير جوٍّ من الهدوء والتركيز للخريجين أثناء المناقشة، ولتجنب التأثير على تقييمهم العلمي. شاكرين تفهمكم ولطفكم.</span>
+            </div>
+
+            <div class="form-group">
+                <label for="guestName"><i class="fa-solid fa-signature"></i> الاسم الكامل</label>
+                <input type="text" id="guestName" placeholder="أدخل اسمك هنا..." />
+            </div>
+
+            <div class="form-group">
+                <label for="guestCount"><i class="fa-solid fa-users"></i> عدد المرافقين معك (الكبار فقط)</label>
+                <input type="number" id="guestCount" min="0" max="20" value="0" placeholder="0" />
+            </div>
+
+            <div class="modal-actions">
+                <button class="btn-cancel-modal" id="modalCancel">إلغاء</button>
+                <button class="btn-confirm-modal" id="modalConfirm">حفظ وتأكيد</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- عنصر إشعار نجاح مخصص (Cyber Toast Notification) -->
+    <div id="cyberToast" class="cyber-toast">
+        <div class="toast-content">
+            <i id="toastIcon" class="fa-solid fa-circle-check"></i>
+            <span id="toastMessage">تم الإجراء بنجاح</span>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>ننتظر تشريفكم · حضوركم هو أجمل إهداء لنا</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+</body>
+</html>
